@@ -14,18 +14,26 @@
   
 
   
-  <title>Tag: Daily | Juno Blog</title>
+  <title>GuacaHoPE: 第一章 | Juno Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Juno Blog">
-<meta property="og:url" content="https://junotsangchunlung.github.io/tags/Daily/index.html">
+  <meta name="description" content="新項目：GuacaHoPE今天來談談我最近的新搞作, 哈哈. GuacaHoPE 這個項目其實是延伸Apache Guacamole 的一個遙距控制桌面的Application. 不知道大家平常有沒有使用TeamViewer, 一些對電腦比較熟悉的同學肯定經過以下的情況： 同學A：我有甚麼甚麼想下載&#x2F; 你可不可以幫我設定好Python的開發環境? 這個時候因為你們都不在附近, 你就會叫同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GuacaHoPE: 第一章">
+<meta property="og:url" content="https://junotsangchunlung.github.io/2023/09/18/Project-Guacahope/index.html">
 <meta property="og:site_name" content="Juno Blog">
+<meta property="og:description" content="新項目：GuacaHoPE今天來談談我最近的新搞作, 哈哈. GuacaHoPE 這個項目其實是延伸Apache Guacamole 的一個遙距控制桌面的Application. 不知道大家平常有沒有使用TeamViewer, 一些對電腦比較熟悉的同學肯定經過以下的情況： 同學A：我有甚麼甚麼想下載&#x2F; 你可不可以幫我設定好Python的開發環境? 這個時候因為你們都不在附近, 你就會叫同">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-09-18T14:17:28.000Z">
+<meta property="article:modified_time" content="2023-09-18T14:36:29.945Z">
 <meta property="article:author" content="Juno Tsang">
+<meta property="article:tag" content="ssh">
+<meta property="article:tag" content="rdp">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Juno Blog" type="application/atom+xml">
@@ -219,44 +227,96 @@
     <div id="content-body">
        
 
-<div class="archive-main-card">
-    <div class="archive-top">
-      <div class="main-title-bar">
-        <div class="main-title-dot"></div>
-        <h1 class="article-title">彙整</h1>
-      </div>    
+<article id="post-Project-Guacahope" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        GuacaHoPE: 第一章
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-09-18T14:17:28.000Z" itemprop="datePublished">2023-09-18</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Project/">Project</a>><a class="meta-cate-link" href="/categories/Project/GuacaHoPE/">GuacaHoPE</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            396 詞 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rdp/" rel="tag">rdp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/" rel="tag">ssh</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h1 id="新項目：GuacaHoPE"><a href="#新項目：GuacaHoPE" class="headerlink" title="新項目：GuacaHoPE"></a>新項目：GuacaHoPE</h1><p>今天來談談我最近的新搞作, 哈哈.</p>
+<p>GuacaHoPE 這個項目其實是延伸Apache Guacamole 的一個遙距控制桌面的Application.</p>
+<p>不知道大家平常有沒有使用TeamViewer, 一些對電腦比較熟悉的同學肯定經過以下的情況：</p>
+<p>同學A：我有甚麼甚麼想下載&#x2F; 你可不可以幫我設定好Python的開發環境?</p>
+<p>這個時候因為你們都不在附近, 你就會叫同學A下載可遙距操控的軟件, 比較有名氣的就是TeamViewer, 除此之外Microsoft Team 會議亦有內置的遙距.</p>
+<p>這些軟件通常運用到我們會稱為 RDP(Remote Desktop Protocol) 或 VNC(Vitrual Network Computing), 再比較專業的朋友或者會接觸到只有command line interface的remote connection, 稱為ssh(Secure Shell) 的三種Protocol(通訊協定)</p>
+<p>但是！！！提到的 Teamviewer 或 Microsoft Team, 甚至我以前在做實習時用過的一款國內的軟件「紅太陽」, 都有他們的缺點：他們都需要確保雙方對口有下載相同的軟件.</p>
+<p>這看似很不起眼, 但在現實很多大型企業的運作中, 每一個可以安裝的軟件都是被設計好的, 又或者如果是在一些 Virtual Machine 上, 公司可能不會想安裝一些第三方軟件, 以避免資料被盜竊.</p>
+<p>這個時候, 可塑性較高的 Apache Guacamole, 便是一款可以考慮的應用了. 注意, 在這裏我是用了「應用」, 亦非「軟件」.</p>
+<p>且等我一一為大家詳解！</p>
+
+        
+      </div>
+
+         
     </div>
     
-    
-      
-      
-        
-        <div class="year-line">
-            <div class="year-num">2023</div>
-            <div class="dot-wrapper">
-                <div class="dot"></div>
-            </div>
-            <div class="article-count">1 篇文章</div>
-        </div>
-      
-      <a class="archive-article-link" href="/2023/09/13/hello-world/" title="Hello World">
-        <div class="date">09-13</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    Hello World
-                
-            </div>
-        </div>
-        <div class="tags">
-            #Daily
-        </div>
-      </a>
-    
+     
   </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2023/09/13/hello-world/"
+      title="Hello World"
+     >
+
+    <p class="title-text">
+      
+        Hello World
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+ 
     </div>
     <div id="footer-wrapper">
       <footer id="footer">
